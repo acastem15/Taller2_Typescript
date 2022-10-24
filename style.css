@@ -1,0 +1,20 @@
+.titleSeries{
+    background-color: #0697a8;
+    margin-top: 10px;
+}
+.tvSeries{
+    font-family:sans-serif;
+    font-size: 20px;
+
+}
+.container-fluid{
+    margin-top: 20px;
+}
+.icon{
+    width: 50px;
+}
+
+.innerRef{
+    width: 10%;
+}
+
