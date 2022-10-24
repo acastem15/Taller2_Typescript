@@ -10,6 +10,9 @@ renderSeriesInTable(dataSeries);
 function displayCard(serie:Serie):void{
   console.log("Cambiando tarjeta");
   clearCard();
+  let megaCard = document.createElement("div");
+  megaCard.className="card mx-lg-auto";
+
   let cardImg = document.createElement("img");
   cardImg.className="card-img-top";
   cardImg.src=serie.imagen;
@@ -18,12 +21,15 @@ function displayCard(serie:Serie):void{
 
   let cardBody = document.createElement("div");
   cardBody.className="card-body";
-  cardBody.innerHTML = `<h2 class ="card-title">${serie.name}</h2>
+  cardBody.innerHTML = `
+                        <h2 class ="card-title">${serie.name}</h2>
                         <p class ="card-text" align = "justify">${serie.description}</p>
                         <a href=${serie.url} ><p class ="card-text">${serie.url}</p></a>
                         `
-  card.appendChild(cardImg);
-  card.appendChild(cardBody);
+  megaCard.appendChild(cardImg); 
+  megaCard.appendChild(cardBody);
+  card.appendChild(megaCard);
+
 
 }
 

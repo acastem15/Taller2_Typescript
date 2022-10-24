@@ -7,6 +7,8 @@ renderSeriesInTable(dataSeries);
 function displayCard(serie) {
     console.log("Cambiando tarjeta");
     clearCard();
+    var megaCard = document.createElement("div");
+    megaCard.className = "card mx-lg-auto";
     var cardImg = document.createElement("img");
     cardImg.className = "card-img-top";
     cardImg.src = serie.imagen;
@@ -14,9 +16,10 @@ function displayCard(serie) {
     cardImg.referrerPolicy = "no-referrer";
     var cardBody = document.createElement("div");
     cardBody.className = "card-body";
-    cardBody.innerHTML = "<h2 class =\"card-title\">".concat(serie.name, "</h2>\n                        <p class =\"card-text\" align = \"justify\">").concat(serie.description, "</p>\n                        <a href=").concat(serie.url, " ><p class =\"card-text\">").concat(serie.url, "</p></a>\n                        ");
-    card.appendChild(cardImg);
-    card.appendChild(cardBody);
+    cardBody.innerHTML = "\n                        <h2 class =\"card-title\">".concat(serie.name, "</h2>\n                        <p class =\"card-text\" align = \"justify\">").concat(serie.description, "</p>\n                        <a href=").concat(serie.url, " ><p class =\"card-text\">").concat(serie.url, "</p></a>\n                        ");
+    megaCard.appendChild(cardImg);
+    megaCard.appendChild(cardBody);
+    card.appendChild(megaCard);
 }
 function renderSeriesInTable(series) {
     console.log('Desplegando series');
